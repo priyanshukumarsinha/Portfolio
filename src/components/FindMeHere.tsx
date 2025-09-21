@@ -16,18 +16,16 @@ type Social = {
 function FindMeHere() {
 
   const socials: Record<string, Social> = {
-    discord: { icon: <AiOutlineDiscord className="text-2xl opacity-75" />, label: "@0xpks", link: "https://0xpks.site" },
-    github: { icon: <FiGithub className="text-2xl opacity-75" />, label: "@0xpks", link: "https://0xpks.site" },
-    instagram: { icon: <FaInstagram className="text-2xl opacity-75" />, label: "@0xpks", link: "https://0xpks.site" },
-    linkedin: { icon: <CiLinkedin className="text-2xl opacity-75" />, label: "@0xpks", link: "https://0xpks.site" },
+    // discord: { icon: <AiOutlineDiscord className="text-2xl opacity-75" />, label: "@0xpks", link: "https://0xpks.site" },
+    github: { icon: <FiGithub className="text-2xl opacity-75" />, label: "@0xpks", link: "http://github.0xpks.site" },
+    instagram: { icon: <FaInstagram className="text-2xl opacity-75" />, label: "@0xpks", link: "http://instagram.0xpks.site" },
+    linkedin: { icon: <CiLinkedin className="text-2xl opacity-75" />, label: "@0xpks", link: "http://linkedin.0xpks.site/" },
   };
 
   return (
     <SectionContainer>
       <HeadingDiv
         heading="Find Me Here"
-        // moreTitle="view more projects"
-        // moreLink="0xpks.site"
       />
       
       <div className="flex gap-6 items-center justify-between flex-wrap w-full">

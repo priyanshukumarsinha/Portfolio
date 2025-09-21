@@ -15,7 +15,7 @@ const BlogDiv = ({blog}:{blog:BlogProps}) => {
             <div className="flex justify-between items-center w-full">
             <div className="flex flex-col w-[90%]">
                 <h2 className="font-semibold mb-2 text-white truncate">
-                {blog.title}
+                    {blog.title}
                 </h2>
                 <p className="text-sm text-gray-400 line-clamp-2">
                 {blog.description}

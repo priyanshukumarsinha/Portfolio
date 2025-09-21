@@ -6,10 +6,10 @@ const Intro = () => {
     <SectionContainer>
         <div className='text-md opacity-70 text-white text-justify flex flex-col gap-4'>
             <p>
-                Hi, i’m Priyanshu Kumar Sinha, a freelance developer from India, studying in Dayananda Sagar College of Engineering. I have worked on various projects, from simple websites to complex web apps, and i enjoy the variety of challenges each project offers.
+              Hi, I’m Priyanshu Kumar Sinha, a passionate full-stack developer from India, currently studying at Dayananda Sagar College of Engineering. I enjoy diving deep into the fundamentals of computer science, and I’m currently building my own CPU through the nand2tetris tutorial.
             </p>
             <p>
-                When I’m not coding, I’m travelling and exploring the world, seeking inspiration in every corner. 
+                When I’m not coding, I’m sharing knowledge with peers, leading initiatives, or exploring new ideas that spark creativity and growth.
             </p>
         </div>
     </SectionContainer>

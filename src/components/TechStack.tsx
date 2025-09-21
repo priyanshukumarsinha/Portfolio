@@ -117,7 +117,7 @@ const TechStack = () => {
         >
             {
                 techStack && techStack.map((tag)=>
-                    <Tags tag = {tag} />
+                    <Tags key={tag.name} tag = {tag} />
                 )
             }
         </div>
