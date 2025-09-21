@@ -4,6 +4,8 @@ import { AiOutlineDiscord } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import type { JSX } from 'react';
+import HeadingDiv from './HeadingDiv';
+import SectionContainer from './SectionContainer';
 
 type Social = {
   icon: JSX.Element;
@@ -21,16 +23,24 @@ function FindMeHere() {
   };
 
   return (
-    <div className="flex gap-6 items-center justify-center">
-      {Object.entries(socials).map(([key, { icon, label, link }]) => (
-        <a key={key} href={link} target="_blank" rel="noopener noreferrer">
-          <RectangleBox>
-            {icon}
-            <span className="pt-3 group-hover:underline">{label}</span>
-          </RectangleBox>
-        </a>
-      ))}
-    </div>
+    <SectionContainer>
+      <HeadingDiv
+        heading="Find Me Here"
+        // moreTitle="view more projects"
+        // moreLink="0xpks.site"
+      />
+      
+      <div className="flex gap-6 items-center justify-between">
+        {Object.entries(socials).map(([key, { icon, label, link }]) => (
+          <a key={key} href={link} target="_blank" rel="noopener noreferrer">
+            <RectangleBox>
+              {icon}
+              <span className="pt-3 group-hover:underline">{label}</span>
+            </RectangleBox>
+          </a>
+        ))}
+      </div>
+    </SectionContainer>
   )
 }
 

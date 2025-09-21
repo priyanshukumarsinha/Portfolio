@@ -1,16 +1,18 @@
-import React from 'react'
+// import React from 'react'
+import Projects from './components/Projects'
 import FindMeHere from './components/FindMeHere'
-import SectionTItle from './components/SectionTItle'
 import Container from './components/Container'
+import LatestBlogs from './components/LatestBlogs'
+import TechStack from './components/TechStack'
 
 const App = () => {
   return (
     <>
-      <div className='flex justify-center items-center bg-[#0a0a0a]'>
+      <div className='flex justify-center items-center bg-[#0a0a0a] h-full'>
         <Container>
-          <SectionTItle>
-            Find Me Here
-          </SectionTItle>
+          <TechStack />
+          <LatestBlogs />
+          <Projects />
           <FindMeHere />
         </Container>
       </div>      
