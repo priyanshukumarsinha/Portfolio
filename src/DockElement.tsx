@@ -1,7 +1,5 @@
 import React, { type JSX } from "react";
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
-// If you use react-router, uncomment the next line and use <RouterLink> instead of <a>
-// import { Link as RouterLink } from "react-router-dom";
+import { HomeIcon} from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -15,13 +13,10 @@ import { cn } from "@/lib/utils";
 import { Dock, DockIcon } from "./components/ui/dock";
 
 // icons from react-icons
-import { FaGithub, FaLinkedin, FaYoutube, FaXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { LuCalendar } from "react-icons/lu";
 import { FaRegEnvelope } from "react-icons/fa";
 import { LuNotebook } from "react-icons/lu";
 import { GoFileDirectory } from "react-icons/go";
-import { FiArchive } from "react-icons/fi";
+// import { FiArchive } from "react-icons/fi";
 import { GrDocumentText } from "react-icons/gr";
 import { RxMoon } from "react-icons/rx";
 
