@@ -6,7 +6,7 @@ import RectangleBox from './RectangleBox'
 const Card = ({project}:any) => {
     if(project === undefined) return null;
     return (
-        <RectangleBox className='w-[48%] max-w-[48%] h-[300px] justify-start items-start'>
+        <RectangleBox className='md:max-w-[48%] sm:w-[48%] w-[100%]  h-[300px] justify-start items-start'>
             <img 
             src={project.imageUrl}
             alt={project.title}
