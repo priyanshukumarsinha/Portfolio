@@ -1,6 +1,5 @@
 import RectangleBox from './RectangleBox'
 import { FaInstagram } from "react-icons/fa";
-import { AiOutlineDiscord } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import type { JSX } from 'react';
