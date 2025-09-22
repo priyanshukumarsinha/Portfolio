@@ -32,23 +32,23 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: FaRegEnvelope, label: "Contact" },
+    { href: "mailto:sinhapriyanshukumar05@gmail.com", icon: FaRegEnvelope, label: "Contact" },
   ],
   contact: {
     social: {
       Blogs: {
         name: "Blogs",
-        url: "#",
+        url: "https://dev.to/priyanshukumarsinha/",
         icon: Icons.blogs,
       },
         Projects: {
         name: "Projects",
-        url: "0xpks.site",
+        url: "repo.0xpks.site",
         icon: GoFileDirectory ,
       },
         Resume: {
         name: "Resume",
-        url: "0xpks.site",
+        url: "https://drive.google.com/file/d/16tI8Ciui80qJvQ8PcGdMdXPYovCktFH4/view?usp=sharing",
         icon: GrDocumentText  ,
       },
     //     Archive: {
@@ -128,15 +128,15 @@ export default function DockElement(): JSX.Element {
           </DockIcon>
         ))}
 
-        <Separator orientation="vertical" className="h-full bg-[#272727]" />
+        {/* <Separator orientation="vertical" className="h-full bg-[#272727]" /> */}
 
+        {/*
         {DATA.extra.map((item) => (
           <DockIcon 
-          className = "text-white "
-          key={item.name}>
+            className = "text-white "
+            key={item.name}>
             <Tooltip>
               <TooltipTrigger asChild>
-                {/* Use <a> for plain React. If using react-router, replace with <RouterLink to={item.href}> */}
                 <a
                   href={item.url}
                   aria-label={item.name}
@@ -148,12 +148,13 @@ export default function DockElement(): JSX.Element {
                   <item.icon className="size-4" />
                 </a>
               </TooltipTrigger>
-              {/* <TooltipContent>
+              <TooltipContent>
                 <p>{item.name}</p>
-              </TooltipContent> */}
+              </TooltipContent>
             </Tooltip>
           </DockIcon>
         ))}
+        */}
 
       </Dock>
     </TooltipProvider>
