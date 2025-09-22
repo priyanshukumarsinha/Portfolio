@@ -27,7 +27,7 @@ function FindMeHere() {
         heading="Find Me Here"
       />
       
-      <div className="flex gap-6 items-center justify-between flex-wrap w-full">
+      <div className="flex gap-6 items-center justify-around flex-wrap w-full">
         {Object.entries(socials).map(([key, { icon, label, link }]) => (
           <a key={key} href={link} target="_blank" rel="noopener noreferrer">
             <RectangleBox>

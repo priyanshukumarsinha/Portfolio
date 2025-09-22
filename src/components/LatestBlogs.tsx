@@ -47,7 +47,7 @@ const LatestBlogs = () => {
         <div className="flex flex-col justify-center gap-5">
             {
                 blogs && blogs.map((blog, idx) =>
-                    blog ? <BlogDiv key={idx} blog={blog} /> : null
+                    blog ? <a href={blog.link} key={idx}  target="_blank" rel="noopener noreferrer"><BlogDiv blog={blog} /></a> : null
                 )
             }
         </div>
