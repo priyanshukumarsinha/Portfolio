@@ -22,7 +22,7 @@ const projects: Project[] = [
     link: "https://github.com/priyanshukumarsinha/vichaar",
     imageUrl: vichaar,
     tags: ["React.js", "TypeScript", "Hono", "PostgreSQL"],
-    liveLink: "https://vichaar.0xpks.site"
+    liveLink: "https://www.vichaar.0xpks.site/"
   },
   {
     title: "WebShield",

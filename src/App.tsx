@@ -36,7 +36,7 @@ const App = () => {
           <TechStack />
           <Achievements />
           <CTA />
-          <FindMeHere />
+          {/* <FindMeHere /> */}
           
           {/* Dock Navigation */}
           <div className="flex fixed left-1/2 -translate-x-1/2 bottom-0 justify-center pb-6 z-50">

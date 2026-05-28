@@ -9,6 +9,7 @@ interface ExperienceItem {
   location: string
   highlights: string[]
   isCurrent: boolean
+  logo?: string
 }
 
 const experiences: ExperienceItem[] = [
@@ -18,6 +19,7 @@ const experiences: ExperienceItem[] = [
     period: "Feb 2025 – Present",
     location: "Bangalore, India",
     isCurrent: true,
+    logo: "https://www.edgeverve.com/favicon.ico",
     highlights: [
       "Engineered banking workflows for Universal Banker using React.js and React Native supporting RM and Teller operations",
       "Prototyped conversational Ladder CD workflows with intent recognition and async UI orchestration",
@@ -47,7 +49,16 @@ const Experience = () => {
                 <h3 className="text-lg md:text-xl font-semibold text-white">
                   {exp.role}
                 </h3>
-                <p className="text-sm md:text-base text-white/60 mt-0.5">{exp.company}</p>
+                <div className="flex items-center gap-2 group/company cursor-pointer mt-0.5">
+                  {exp.logo && (
+                    <img 
+                      src={exp.logo} 
+                      alt={exp.company}
+                      className="w-4 h-4 opacity-0 group-hover/company:opacity-100 transition-opacity duration-300 rounded"
+                    />
+                  )}
+                  <p className="text-sm md:text-base text-white/60 group-hover/company:text-white/80 transition-colors duration-300">{exp.company}</p>
+                </div>
               </div>
               <div className="text-xs md:text-sm text-white/50 flex items-center gap-2">
                 {exp.isCurrent && (
@@ -59,17 +70,25 @@ const Experience = () => {
                 <span>{exp.period}</span>
               </div>
             </div>
-            
+
             <p className="text-xs text-white/40 mb-3">{exp.location}</p>
-            
-            <ul className="space-y-2">
-              {exp.highlights.map((highlight, hIdx) => (
-                <li key={hIdx} className="flex gap-2.5 text-xs md:text-sm text-white/70 leading-relaxed">
-                  <span className="text-white/40 mt-1.5 flex-shrink-0">→</span>
-                  <span>{highlight}</span>
-                </li>
-              ))}
-            </ul>
+
+            <div className="relative">
+              {/* Vertical line */}
+              <div className="absolute left-1 top-0 bottom-0 w-0.5 bg-white/20" />
+              
+              <ul className="space-y-2">
+                {exp.highlights.map((highlight, hIdx) => (
+                  <li key={hIdx} className="relative flex gap-0 text-xs md:text-sm text-white/70 leading-relaxed transition-colors duration-200 pl-4 group/item cursor-pointer">
+                    {/* Horizontal connector line */}
+                    <span className="absolute left-1.5 top-2 w-1.5 h-0.5 bg-white/20 group-hover/item:bg-white/60 transition-all duration-300" />
+                    <span className="group-hover/item:text-white group-hover/item:translate-x-1 transition-all duration-300">
+                      {highlight}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         ))}
       </div>

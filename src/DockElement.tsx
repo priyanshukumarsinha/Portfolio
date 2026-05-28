@@ -43,7 +43,7 @@ const DATA = {
       },
         Projects: {
         name: "Projects",
-        url: "repo.0xpks.site",
+        url: "https://github.com/priyanshukumarsinha",
         icon: GoFileDirectory ,
       },
         Resume: {
