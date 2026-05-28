@@ -1,26 +1,77 @@
-// import React from 'react'
+import { motion } from 'motion/react'
 import SectionContainer from './SectionContainer'
 
 const Banner = () => {
   return (
     <SectionContainer>
-        <div className='relative flex justify-start items-center gap-4 w-full mt-14'>
-            <div className='flex flex-col gap-1 justify-center items-start w-[60%]'>
-                <h1 className='font-semibold text-white text-xl opacity-80'>Priyanshu</h1>
-                <p className='text-sm opacity-80 text-white'>Full Stack Developer</p>
-            </div>
-            <div className='flex-1 flex justify-end items-center'>
-                <img 
-                src="https://picsum.photos/200" 
-                alt="avatar" 
-                className='w-16 h-16 rounded-full object-cover' 
-                />
-            </div>
-            <div className='absolute right-0 bottom-1 h-3 w-3 bg-green-600 rounded-full border-2 border-[#0a0a0a]'>
-                
-            </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-12 w-full mt-16 md:mt-24"
+      >
+        <div className="flex flex-col gap-4 md:gap-6 justify-center items-start">
+          <motion.h1
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight"
+          >
+            Priyanshu Kumar Sinha
+          </motion.h1>
+          
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col gap-2 md:gap-3"
+          >
+            <h2 className="text-xl md:text-2xl lg:text-2xl font-semibold text-white/95">
+              Product Engineer Intern
+            </h2>
+            <p className="text-base md:text-lg text-white/70 leading-relaxed">
+              Frontend & AI Engineering • Conversational Systems • Banking Workflows
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex gap-6 text-sm md:text-base text-white/60 mt-4"
+          >
+            <span>📍 Bangalore, India</span>
+            <span>•</span>
+            <span>EdgeVerve Systems</span>
+          </motion.div>
         </div>
-
+        
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative flex-shrink-0"
+        >
+          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border border-white/10 group">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent z-10 group-hover:from-white/20 transition-all duration-300" />
+            
+            <img
+              src="https://github.com/priyanshukumarsinha.png"
+              alt="Priyanshu Kumar Sinha"
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = 'https://ui-avatars.com/api/?name=Priyanshu+Kumar+Sinha&background=1a1a1a&color=fff&size=200'
+              }}
+            />
+          </div>
+          
+          <motion.div
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="absolute -bottom-2 -right-2 h-4 w-4 bg-green-500 rounded-full border-2 border-[#0a0a0a] shadow-lg shadow-green-500/50"
+          />
+        </motion.div>
+      </motion.div>
     </SectionContainer>
   )
 }
