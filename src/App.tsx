@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import Projects from './components/Projects'
-import FindMeHere from './components/FindMeHere'
+// import FindMeHere from './components/FindMeHere'
 import Container from './components/Container'
 import TechStack from './components/TechStack'
 import Intro from './components/Intro'
