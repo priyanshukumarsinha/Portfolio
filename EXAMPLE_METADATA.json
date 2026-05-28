@@ -1,0 +1,13 @@
+{
+  "title": "Your Project Title",
+  "description": "A brief, engaging description of your project that will appear on the portfolio.",
+  "tags": [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Your Tech Stack Here"
+  ],
+  "liveUrl": "https://yourproject.com",
+  "featured": true
+}

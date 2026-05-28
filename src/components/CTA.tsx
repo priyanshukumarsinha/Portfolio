@@ -15,7 +15,7 @@ const ctas: CTAButton[] = [
   {
     label: "Resume",
     icon: <FiDownload className="text-lg" />,
-    href: "https://drive.google.com/file/d/YOUR_RESUME_ID/view",
+    href: "https://priyanshukumarsinha.github.io/priyanshukumarsinha/PriyanshuKumarSinha.pdf",
     isPrimary: true,
   },
   {

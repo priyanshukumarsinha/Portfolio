@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { FiGithub } from 'react-icons/fi'
 
 const Card = ({ project }: any) => {
   if (project === undefined) return null
@@ -11,7 +11,7 @@ const Card = ({ project }: any) => {
       className="group w-full border border-white/10 rounded-lg overflow-hidden bg-gradient-to-br from-white/4 to-transparent hover:border-white/20 transition-all duration-300"
     >
       {/* Image Section */}
-      <div className="relative overflow-hidden h-full bg-gradient-to-br from-white/10 to-transparent">
+      <div className="relative overflow-hidden h-full max-h-52 bg-gradient-to-br from-white/10 to-transparent">
         <img
           src={project.imageUrl}
           alt={project.title}
@@ -44,7 +44,7 @@ const Card = ({ project }: any) => {
               <FiGithub className="text-sm" />
             </motion.a>
             
-            <motion.a
+            {/* <motion.a
               href={project.liveLink}
               target="_blank"
               rel="noreferrer"
@@ -54,7 +54,7 @@ const Card = ({ project }: any) => {
               title="Live Demo"
             >
               <FiExternalLink className="text-sm" />
-            </motion.a>
+            </motion.a> */}
           </div>
         </div>
 

@@ -48,7 +48,7 @@ const DATA = {
       },
         Resume: {
         name: "Resume",
-        url: "https://drive.google.com/file/d/16tI8Ciui80qJvQ8PcGdMdXPYovCktFH4/view?usp=sharing",
+        url: "https://priyanshukumarsinha.github.io/priyanshukumarsinha/PriyanshuKumarSinha.pdf",
         icon: GrDocumentText  ,
       },
     //     Archive: {

@@ -2,6 +2,9 @@ import { motion } from 'motion/react'
 import HeadingDiv from './HeadingDiv'
 import Card from './Card'
 import SectionContainer from './SectionContainer'
+import ProjectsLoader from './ProjectsLoader'
+import SkeletonCard from './SkeletonCard'
+import { useProjects } from '@/hooks/useProjects'
 import vichaar from '../assets/preview.png'
 import p2 from '../assets/p2.jpg'
 import p3 from '../assets/p3.png'
@@ -15,7 +18,8 @@ interface Project {
   liveLink: string
 }
 
-const projects: Project[] = [
+// Fallback projects in case GitHub API fails
+const fallbackProjects: Project[] = [
   {
     title: "Vichaar",
     description: "Full-stack blogging platform with rich-text editing and real-time collaboration.",
@@ -51,6 +55,15 @@ const projects: Project[] = [
 ]
 
 const Projects = () => {
+  const GITHUB_USERNAME = "priyanshukumarsinha"
+  const { projects: dynamicProjects, loading } = useProjects(GITHUB_USERNAME)
+
+  // Use dynamic projects if available, otherwise use fallback
+  const projects = dynamicProjects.length > 0 ? dynamicProjects : fallbackProjects
+  
+  // Show skeletons while loading (only on first load, not when already showing fallback)
+  const showSkeletons = loading && dynamicProjects.length === 0
+
   return (
     <SectionContainer>
       <HeadingDiv
@@ -60,18 +73,28 @@ const Projects = () => {
       />
       
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        {projects.map((project, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: idx * 0.08 }}
-            viewport={{ once: true }}
-          >
-            <Card project={project} />
-          </motion.div>
-        ))}
+        {showSkeletons ? (
+          // Show skeleton placeholders while loading
+          Array(4).fill(null).map((_, idx) => (
+            <SkeletonCard key={`skeleton-${idx}`} index={idx} />
+          ))
+        ) : (
+          // Show actual cards
+          projects.map((project, idx) => (
+            <motion.div
+              key={`${project.title}-${idx}`}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              viewport={{ once: true }}
+            >
+              <Card project={project} />
+            </motion.div>
+          ))
+        )}
       </div>
+      
+      {loading && dynamicProjects.length === 0 && <ProjectsLoader />}
     </SectionContainer>
   )
 }
