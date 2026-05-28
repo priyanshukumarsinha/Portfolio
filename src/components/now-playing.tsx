@@ -124,12 +124,12 @@ const NowPlaying = () => {
             <h3 className="font-semibold text-[10px] text-white line-clamp-2 group-hover:text-white/90 transition-colors">
               {track.name}
             </h3>
-            {/* <p className="text-xs md:text-sm text-white/60 group-hover:text-white/70 line-clamp-1 transition-colors">
+            {/* <p className="text-[8px] md:text-[10px] text-white/60 group-hover:text-white/70 line-clamp-1 transition-colors">
               {track.artist}
             </p> */}
 
             {!track.isNowPlaying && track.playedAt && (
-              <p className="text-xs text-white/50 pt-1 border-t border-white/10 mt-2">
+              <p className="text-[8px] text-white/50 mt-1">
                 Last played recently
               </p>
             )}
