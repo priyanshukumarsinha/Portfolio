@@ -9,7 +9,7 @@ const Intro = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-lg md:text-xl text-white/75 flex flex-col gap-7 md:gap-8 leading-relaxed md:leading-8"
+        className="text-base md:text-lg text-white/70 flex flex-col gap-5 md:gap-6 leading-relaxed"
       >
         <p>
           I'm a Product Engineer Intern at EdgeVerve Systems, building banking workflows and conversational AI systems. I specialize in <span className="text-white font-semibold">React.js, TypeScript, and Agentic AI</span>, crafting intelligent, user-centric interfaces for complex financial workflows.

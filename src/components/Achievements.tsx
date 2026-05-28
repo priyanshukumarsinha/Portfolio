@@ -38,23 +38,23 @@ const Achievements = () => {
   return (
     <SectionContainer>
       <HeadingDiv heading="Achievements & Certifications" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
         {achievements.map((achievement, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            transition={{ duration: 0.4, delay: idx * 0.08 }}
             viewport={{ once: true }}
-            className="group border border-white/10 rounded-lg p-5 md:p-6 hover:border-white/20 transition-all duration-300 bg-gradient-to-br from-white/5 to-transparent hover:bg-white/10"
+            className="group border border-white/10 rounded-lg p-4 md:p-5 hover:border-white/20 transition-all duration-300 bg-gradient-to-br from-white/4 to-transparent"
           >
-            <div className="flex gap-4 items-start mb-4">
-              <div className="text-amber-400 mt-1 text-lg md:text-xl flex-shrink-0">{achievement.icon}</div>
-              <h3 className="text-base md:text-lg font-bold text-white line-clamp-2 leading-snug">
+            <div className="flex gap-3 items-start mb-2">
+              <div className="text-amber-400 mt-0.5 text-sm md:text-base flex-shrink-0">{achievement.icon}</div>
+              <h3 className="text-sm md:text-base font-semibold text-white line-clamp-2">
                 {achievement.title}
               </h3>
             </div>
-            <p className="text-sm md:text-base text-white/65 leading-relaxed">
+            <p className="text-xs md:text-sm text-white/60">
               {achievement.description}
             </p>
           </motion.div>

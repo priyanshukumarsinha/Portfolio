@@ -6,12 +6,12 @@ const Card = ({ project }: any) => {
 
   return (
     <motion.div
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.3 }}
-      className="group w-full border border-white/10 rounded-xl overflow-hidden bg-gradient-to-br from-white/5 to-transparent hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/10"
+      whileHover={{ y: -3 }}
+      transition={{ duration: 0.2 }}
+      className="group w-full border border-white/10 rounded-lg overflow-hidden bg-gradient-to-br from-white/4 to-transparent hover:border-white/20 transition-all duration-300"
     >
       {/* Image Section */}
-      <div className="relative overflow-hidden h-[200px] md:h-[250px] bg-gradient-to-br from-white/10 to-transparent">
+      <div className="relative overflow-hidden h-32 md:h-40 bg-gradient-to-br from-white/10 to-transparent">
         <img
           src={project.imageUrl}
           alt={project.title}
@@ -21,21 +21,13 @@ const Card = ({ project }: any) => {
       </div>
 
       {/* Content Section */}
-      <div className="p-6 md:p-8 flex flex-col gap-5">
+      <div className="p-4 md:p-5 flex flex-col gap-3">
         {/* Title and Links */}
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-2 truncate group-hover:text-white/90 transition-colors">
+            <h3 className="text-base md:text-lg font-semibold text-white truncate group-hover:text-white/90 transition-colors">
               {project.title}
             </h3>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm text-white/50 hover:text-white/80 transition-colors truncate inline-block max-w-full"
-            >
-              github.com/priyanshukumarsinha
-            </a>
           </div>
           
           {/* External Links */}
@@ -46,10 +38,10 @@ const Card = ({ project }: any) => {
               rel="noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="p-3 rounded-lg border border-white/10 text-white/60 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all"
+              className="p-2 rounded-md border border-white/10 text-white/50 hover:text-white hover:border-white/20 transition-all"
               title="GitHub"
             >
-              <FiGithub className="text-xl" />
+              <FiGithub className="text-sm" />
             </motion.a>
             
             <motion.a
@@ -58,25 +50,25 @@ const Card = ({ project }: any) => {
               rel="noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="p-3 rounded-lg border border-white/10 text-white/60 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all"
+              className="p-2 rounded-md border border-white/10 text-white/50 hover:text-white hover:border-white/20 transition-all"
               title="Live Demo"
             >
-              <FiExternalLink className="text-xl" />
+              <FiExternalLink className="text-sm" />
             </motion.a>
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-base md:text-lg text-white/75 line-clamp-2 leading-relaxed">
+        <p className="text-xs md:text-sm text-white/65 line-clamp-2">
           {project.description}
         </p>
 
         {/* Tech Stack */}
-        <div className="flex flex-wrap gap-2 pt-3">
+        <div className="flex flex-wrap gap-1.5 pt-2">
           {project.tags.map((tag: string, idx: number) => (
             <span
               key={idx}
-              className="inline-flex px-3 py-2 rounded-md bg-white/5 border border-white/10 text-sm md:text-base text-white/75 hover:text-white hover:border-white/20 transition-all group-hover:bg-white/10 font-medium"
+              className="inline-flex px-2 py-1 rounded-sm bg-white/5 border border-white/10 text-xs text-white/60 hover:text-white/80 transition-all group-hover:bg-white/8"
             >
               {tag}
             </span>

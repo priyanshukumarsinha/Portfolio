@@ -3,6 +3,8 @@ import HeadingDiv from './HeadingDiv'
 import Card from './Card'
 import SectionContainer from './SectionContainer'
 import vichaar from '../assets/preview.png'
+import p2 from '../assets/p2.jpg'
+import p3 from '../assets/p3.png'
 
 interface Project {
   title: string
@@ -11,28 +13,41 @@ interface Project {
   imageUrl: string
   tags: string[]
   liveLink: string
-  isPinned?: boolean
 }
 
 const projects: Project[] = [
   {
     title: "Vichaar",
-    description: "Full-stack blogging platform with rich-text editing, authentication, and responsive design. Built with React.js, TypeScript, Hono, PostgreSQL, and deployed on Cloudflare Workers.",
+    description: "Full-stack blogging platform with rich-text editing and real-time collaboration.",
     link: "https://github.com/priyanshukumarsinha/vichaar",
     imageUrl: vichaar,
-    tags: ["React.js", "TypeScript", "Hono", "PostgreSQL", "Cloudflare Workers"],
-    liveLink: "https://vichaar.0xpks.site",
-    isPinned: true
+    tags: ["React.js", "TypeScript", "Hono", "PostgreSQL"],
+    liveLink: "https://vichaar.0xpks.site"
+  },
+  {
+    title: "WebShield",
+    description: "Comprehensive security analysis tool for web application vulnerabilities.",
+    link: "https://github.com/priyanshukumarsinha/webshield",
+    imageUrl: p3,
+    tags: ["Node.js", "Socket.io", "Security"],
+    liveLink: "https://github.com/priyanshukumarsinha/webshield"
   },
   {
     title: "SchedLang",
-    description: "Domain-specific scheduling language with custom lexer, parser, and semantic analysis. Implemented LL(1) parsing techniques and recursive descent parsing for compiler design.",
+    description: "Domain-specific language for scheduling with compiler design and parsing.",
     link: "https://github.com/priyanshukumarsinha/schedlang",
     imageUrl: vichaar,
-    tags: ["C++", "Compiler Design", "Recursive Descent Parsing"],
-    liveLink: "https://github.com/priyanshukumarsinha/schedlang",
-    isPinned: true
+    tags: ["C++", "Compiler Design", "DSL"],
+    liveLink: "https://github.com/priyanshukumarsinha/schedlang"
   },
+  {
+    title: "HTTP Server",
+    description: "Custom HTTP server implementation with request routing and middleware.",
+    link: "https://github.com/priyanshukumarsinha/http-server",
+    imageUrl: p2,
+    tags: ["Node.js", "Networking", "Backend"],
+    liveLink: "https://github.com/priyanshukumarsinha/http-server"
+  }
 ]
 
 const Projects = () => {
@@ -40,17 +55,17 @@ const Projects = () => {
     <SectionContainer>
       <HeadingDiv
         heading="Featured Projects"
-        moreTitle="View all projects"
+        moreTitle="View all"
         moreLink="https://github.com/priyanshukumarsinha"
       />
       
-      <div className='flex flex-col gap-6'>
-        {projects && projects.map((project, idx) => (
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        {projects.map((project, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            transition={{ duration: 0.4, delay: idx * 0.08 }}
             viewport={{ once: true }}
           >
             <Card project={project} />

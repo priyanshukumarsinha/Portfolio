@@ -9,6 +9,7 @@ import DockElement from './DockElement'
 import Experience from './components/Experience'
 import Achievements from './components/Achievements'
 import CTA from './components/CTA'
+import LatestBlogs from './components/LatestBlogs'
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Intro />
           <Experience />
           <Projects />
+          <LatestBlogs />
           <TechStack />
           <Achievements />
           <CTA />

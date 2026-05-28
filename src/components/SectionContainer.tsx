@@ -2,7 +2,7 @@ import { type ReactNode } from 'react'
 
 const SectionContainer = ({children}: {children: ReactNode}) => {
   return (
-    <div className='mb-20 md:mb-24'>
+    <div className='mb-16 md:mb-20'>
         {children}
     </div>
   )

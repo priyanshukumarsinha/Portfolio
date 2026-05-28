@@ -8,14 +8,14 @@ const Banner = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-12 w-full mt-16 md:mt-24"
+        className="relative flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-10 w-full mt-12 md:mt-16"
       >
-        <div className="flex flex-col gap-4 md:gap-6 justify-center items-start">
+        <div className="flex flex-col gap-3 md:gap-4 justify-center items-start">
           <motion.h1
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight"
+            className="text-3xl md:text-5xl font-bold text-white tracking-tight"
           >
             Priyanshu Kumar Sinha
           </motion.h1>
@@ -24,12 +24,12 @@ const Banner = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col gap-2 md:gap-3"
+            className="flex flex-col gap-2"
           >
-            <h2 className="text-xl md:text-2xl lg:text-2xl font-semibold text-white/95">
+            <h2 className="text-lg md:text-xl font-semibold text-white/95">
               Product Engineer Intern
             </h2>
-            <p className="text-base md:text-lg text-white/70 leading-relaxed">
+            <p className="text-sm md:text-base text-white/70">
               Frontend & AI Engineering • Conversational Systems • Banking Workflows
             </p>
           </motion.div>
@@ -38,7 +38,7 @@ const Banner = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex gap-6 text-sm md:text-base text-white/60 mt-4"
+            className="flex gap-5 text-xs md:text-sm text-white/60 mt-3"
           >
             <span>📍 Bangalore, India</span>
             <span>•</span>

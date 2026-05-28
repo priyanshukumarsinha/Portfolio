@@ -34,7 +34,7 @@ function FindMeHere() {
     <SectionContainer>
       <HeadingDiv heading="Connect" />
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 w-full">
         {Object.entries(socials).map(([key, { icon, label, link }]) => (
           <motion.a
             key={key}
@@ -44,11 +44,11 @@ function FindMeHere() {
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
           >
-            <RectangleBox className="flex-col items-center justify-center gap-3 h-[160px] md:h-[180px] group hover:border-white/30 hover:bg-white/5 transition-all">
-              <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-300">
+            <RectangleBox className="flex-col items-center justify-center gap-2 h-28 md:h-32 group hover:border-white/20 hover:bg-white/4 transition-all">
+              <div className="text-3xl md:text-4xl group-hover:scale-110 transition-transform duration-300">
                 {icon}
               </div>
-              <span className="text-base md:text-lg font-semibold text-white/85 group-hover:text-white transition-colors">
+              <span className="text-xs md:text-sm font-medium text-white/75 group-hover:text-white transition-colors">
                 {label}
               </span>
             </RectangleBox>
