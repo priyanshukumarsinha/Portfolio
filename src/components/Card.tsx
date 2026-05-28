@@ -11,7 +11,7 @@ const Card = ({ project }: any) => {
       className="group w-full border border-white/10 rounded-lg overflow-hidden bg-gradient-to-br from-white/4 to-transparent hover:border-white/20 transition-all duration-300"
     >
       {/* Image Section */}
-      <div className="relative overflow-hidden h-32 md:h-40 bg-gradient-to-br from-white/10 to-transparent">
+      <div className="relative overflow-hidden h-full bg-gradient-to-br from-white/10 to-transparent">
         <img
           src={project.imageUrl}
           alt={project.title}

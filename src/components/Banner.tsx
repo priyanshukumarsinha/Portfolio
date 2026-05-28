@@ -66,11 +66,11 @@ const Banner = () => {
             />
           </div>
           
-          <motion.div
+          {/* <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
             className="absolute -bottom-2 -right-2 h-4 w-4 bg-green-500 rounded-full border-2 border-[#0a0a0a] shadow-lg shadow-green-500/50"
-          />
+          /> */}
 
           {/* Recently Listening To Widget */}
           <NowPlaying />

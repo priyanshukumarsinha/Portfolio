@@ -27,7 +27,7 @@ const experiences: ExperienceItem[] = [
       "Built AI-assisted workflows using LangChain, Langflow, and Agentic AI systems",
       "Reverse-engineered FlowBuilder platform (Node-RED based) and authored technical documentation"
     ]
-  }
+  },
 ]
 
 const Experience = () => {
@@ -49,12 +49,13 @@ const Experience = () => {
                 <h3 className="text-lg md:text-xl font-semibold text-white">
                   {exp.role}
                 </h3>
+                {/* need to add transition here when the logo is hovered */}
                 <div className="flex items-center gap-2 group/company cursor-pointer mt-0.5">
                   {exp.logo && (
                     <img 
                       src={exp.logo} 
                       alt={exp.company}
-                      className="w-4 h-4 opacity-0 group-hover/company:opacity-100 transition-opacity duration-300 rounded"
+                      className="w-4 h-4 opacity-0 hidden group-hover/company:flex group-hover/company:opacity-100 transition-opacity duration-300 rounded"
                     />
                   )}
                   <p className="text-sm md:text-base text-white/60 group-hover/company:text-white/80 transition-colors duration-300">{exp.company}</p>
